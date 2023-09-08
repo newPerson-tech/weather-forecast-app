@@ -9,26 +9,38 @@
 </head>
 <body>
     <div class="container">
+        <div class="app-wrapper-external">
         <div class="app-wrapper">
             <header class="current-forecast">
-                <h1 class="current-location">
-                    New York
-                </h1>
-                <ul class="current-forecast-data">
-                    <li class="current-date">
-                        Friday 5:00
-                    </li>
-                    <li class="current-temp-day">
-                        Day 16°
-                    </li>
-                    <li class="current-temp-night">
-                        Night 15°
-                    </li>
-                </ul>
+                <div class="overview">
+                    <h1 class="current-location">
+                        New York
+                    </h1>
+                    <ul class="current-forecast-data">
+                        <li class="current-date">
+                            Friday 5:00
+                        </li>
+                        <li class="current-temp-day">
+                            Day 16°
+                        </li>
+                        <li class="current-temp-night">
+                            Night 15°
+                        </li>
+                    </ul>
+                </div>
                 <div class="row">
                     <div class="col-6">
-                        <img src="./images/sunny.png" alt="header-image-current-weather">
-                        12°C | °F
+                        <div class="clearfix weather-temperature">
+                            <img 
+                                src="./images/sunny.png" 
+                                alt="header-image-current-weather"
+                                class="float-left"
+                            />
+                            <div class="float-left">
+                                <strong>12</strong>
+                                <span class="units">°C | <a href="" class="fahrenheits">°F</a></span>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-6">
                         <ul class="current-forecast-details">
@@ -45,6 +57,7 @@
                     </div>
                 </div>
             </header>
+        </div>
             <small>
                 <a href="https://github.com/newPerson-tech/weather-forecast-app" target="_blank">Open-source code</a>
                 by Tetiana Paniot
