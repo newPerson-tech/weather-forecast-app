@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="./src/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>Weather Forecast Online</title>
@@ -13,18 +14,17 @@
         <div class="app-wrapper">
             <header class="current-forecast">
                 <div class="overview">
-                    <h1 class="current-location">
-                        New York
+                    <h1 class="current-location" id="city">
                     </h1>
                     <ul class="current-forecast-data">
                         <li class="current-date">
                             Friday 5:00
                         </li>
                         <li class="current-temp-day">
-                            Day 16°
+                            Day <span id="temperature-day"></span>°
                         </li>
                         <li class="current-temp-night">
-                            Night 15°
+                            Night <span id="temperature-night"></span>°
                         </li>
                     </ul>
                 </div>
@@ -37,21 +37,18 @@
                                 class="float-left"
                             />
                             <div class="float-left">
-                                <strong>12</strong>
+                                <strong id="temperature"></strong>
                                 <span class="units">°C | <a href="" class="fahrenheits">°F</a></span>
                             </div>
                         </div>
                     </div>
                     <div class="col-6">
                         <ul class="current-forecast-details">
-                            <li class="precipitation">
-                                Precipitation: 0%
-                            </li>
                             <li class="humidity">
-                                Humidity: 73%
+                                Humidity: <span id="humidity">73</span>%
                             </li>
                             <li class="wind">
-                                Wind: 2km/h
+                                Wind: <span id="wind">2</span>km/h
                             </li>
                         </ul>
                     </div>
